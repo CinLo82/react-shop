@@ -1,8 +1,9 @@
-import '../styles/global.scss'
+import '../styles/global.css'
+import Login from '../containers/Login';
 
-const App = () => {
+function App() {
         return (
-         <h1>Holaa mundoooooo</h1>       
+         <Login />   
         )
 }
-export default App;
+export { App };

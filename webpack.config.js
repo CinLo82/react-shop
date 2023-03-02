@@ -7,8 +7,12 @@ module.exports = {
     output: { 
         path: path.resolve(__dirname, 'build'), 
         filename: 'main.js'
+
     },
     mode: 'development',
+    resolve: {
+		extensions: ['.js', '.jsx'],
+	},
     module: {
         rules: [
             {
@@ -28,12 +32,12 @@ module.exports = {
                 
             },
             {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    "style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
+                test: /\.(css|scss)$/,
+				use: [
+					"style-loader",
+					"css-loader",
+					"sass-loader",
+				],
             },
         ]
     },

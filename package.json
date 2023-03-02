@@ -2,10 +2,10 @@
   "name": "react-shop",
   "version": "1.0.0",
   "description": "",
-  "main": "/src/index.js",
+  "main": "./src/index.js",
   "scripts": {
-    "start": "webpack serve --open --mode development",
-    "build": "webpack --mode=development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --open --mode development --env development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
