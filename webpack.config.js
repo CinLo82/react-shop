@@ -6,8 +6,8 @@ module.exports = {
     entry: './src/index.js',
     output: { 
         path: path.resolve(__dirname, 'build'), 
-        filename: 'main.js'
-
+        filename: 'main.js',
+        publicPath: '/',
     },
     mode: 'development',
     resolve: {
@@ -63,5 +63,6 @@ module.exports = {
         static: path.join(__dirname, 'build'),
         compress:true,
         port:3005,
+        historyApiFallback: true,
     }
 }

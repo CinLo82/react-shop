@@ -28,7 +28,7 @@ const Login = () => {
                 />
                 <input
                 type="submit"
-                defaultValue="Confirm"
+                value="Confirm"
                 className="primary-button login-button"
                 />
             </form>
