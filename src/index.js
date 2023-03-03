@@ -1,10 +1,8 @@
 
 import {StrictMode} from 'react';
 import {createRoot} from 'react-dom/client';
+import { App } from './routes/App';
 
-import { App } from './components/App';
-
-// ✅ correct ID passed
 const rootElement = document.getElementById('root');
 const root = createRoot(rootElement);
 
