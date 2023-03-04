@@ -1,10 +1,12 @@
-import OrdenItem from "../components/OrdenItem";
+import OrdenItem from "components/OrdenItem";
+import 'styles/MyOrder.scss';
+import flechita from 'icons/flechita.svg';
 
 const MyOrder = () => {
     return(
         <aside className="MyOrder">
             <div className="title-container">
-                <img src="./icons/flechita.svg" alt="arrow" />
+                <img src={ flechita } alt="arrow" />
                 <p className="title">My order</p>
             </div>
             <div className="my-order-content">

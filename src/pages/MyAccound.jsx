@@ -1,4 +1,4 @@
-import '../styles/MyAccound.scss';
+import 'styles/MyAccound.scss';
 
 const MyAccound = () => {
     return(

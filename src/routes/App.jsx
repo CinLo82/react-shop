@@ -12,8 +12,6 @@ import CreateAccount from '../pages/CreateAccound';
 import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 
-
-
 function App() {
         return (
 			<BrowserRouter>

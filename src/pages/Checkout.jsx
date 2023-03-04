@@ -1,5 +1,5 @@
-import OrderItem from '../components/OrderItem';
-import '../styles/Checkout.scss';
+import OrderItem from 'components/OrderItem';
+import 'styles/Checkout.scss';
 
 const Checkout = () => {
     return(

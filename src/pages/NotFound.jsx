@@ -1,10 +1,11 @@
-import '../styles/NotFound.scss';
+import 'styles/NotFound.scss';
+import notFound from 'logos/notFound.jpg';
 
 const NotFound = () => {
     return(
         <div className="login">
             <div className="form-container">
-                <img src="logo/notFound.jpg" alt="logo" />
+                <img src={ notFound } alt="logo" />
                 <h1 className="title">OOPS... Page Not Found</h1>
                 <p className="subtitle">The page are looking for no longer exist.</p>
                 <a href='/' 
