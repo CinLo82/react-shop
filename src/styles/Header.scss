@@ -6,7 +6,7 @@ nav {
     padding: 0 24px;
     border-bottom: 1px solid var(--very-light-pink);
   }
-  .menu {
+  .nav-menu {
     display: none;
   }
   .nav-logo {
@@ -41,9 +41,10 @@ nav {
     color: var(--hospital-green);
   }
   .navbar-email {
-    color: var(--very-light-pink);
     font-size: var(--sm);
     margin-right: 12px;
+     cursor: pointer;
+    color: var(--hospital-green);
   }
   .navbar-shopping-cart {
     position: relative;
@@ -63,7 +64,7 @@ nav {
     align-items: center;
   }
   @media (max-width: 640px) {
-    .menu {
+    .nav-menu {
       display: block;
     }
     .navbar-left ul {
