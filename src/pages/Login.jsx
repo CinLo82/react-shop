@@ -1,41 +1,67 @@
+import { useRef } from 'react';
 import 'styles/Login.scss'
 import logo from 'logos/logo_yard_sale.svg';
 
 const Login = () => {
+    const form = useRef(null);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const formData = new FormData(form.current);
+        const data = {
+            usename: formData.get('email'),
+            password: formData.get('password'),
+        }
+        console.log(data);
+    }
+    
+
     return(
         <div className="login">
-            <div className="form-container">
+            <div className="login-container">
             <img src={ logo } alt="logo" className="login-logo" />
-            <h1 className="login-title">Create a new password</h1>
-            <p className="login-subtitle">Enter a new password for your accound</p>
-            <form action="/" className="form">
-                <label htmlFor="password" className="label">
-                Password
-                </label>
-                <input
-                type="password"
-                id="password"
-                placeholder="*********"
-                className="input input-password"
-                />
-                <label htmlFor="new-password" className="label">
-                Password
-                </label>
-                <input
-                type="password"
-                id="new-password"
-                placeholder="*********"
-                className="input input-password"
-                />
-                <input
-                type="submit"
-                value="Confirm"
-                className="primary-button login-button"
-                />
-            </form>
-            </div>
-        </div>
-      
+            <form action="/" className="form" ref={form}>
+					<label 
+                        htmlFor="email" 
+                        className="label"
+                    >
+                        Email address
+                    </label>
+					<input 
+                        type="text" 
+                        name="email" 
+                        placeholder="platzi@example.cm" 
+                        className="input input-email" 
+                    />
+					<label 
+                        htmlFor="password" 
+                        className="label"
+                    >
+                        Password
+                    </label>
+					<input 
+                        type="password" 
+                        name="password" 
+                        placeholder="*********" 
+                        className="input input-password" 
+                    />
+					<button
+						type='submit'
+                        onClick={handleSubmit}
+						className="primary-button login-button"
+                    >
+						Log in
+					</button>
+					<a href="/">Forgot my password</a>
+				</form>
+				<button 
+					className="secondary-button signup-button"
+				>
+					Sign up
+				</button>
+			</div>
+		</div>
+
     );
 }
 
