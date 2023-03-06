@@ -7,15 +7,24 @@ const initialState = {
 const useInitialState = () => {
     const [state, setState] = useState(initialState);
 
-    const addToCart = (payload) => {
+    const addToCart = (indexValue) => {
         setState({
             ...state,
-            cart: [...state.cart, payload]
+            cart: [...state.cart, indexValue]
         });
     };
+
+    const removeFromCart = (indexValue) => {
+        setState({
+          ...state,
+          cart: state.cart.filter((_,index) => index !== indexValue),
+        })
+      }
+
     return {
         state,
-        addToCart
+        addToCart,
+        removeFromCart
     }
 }
 
