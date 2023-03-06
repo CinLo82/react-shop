@@ -1,6 +1,6 @@
 import { useState, useContext } from 'react';
 import Menu from 'components/Menu';
-import AppContext from '../context/AppContext';
+import AppContext from 'context/AppContext';
 import MyOrder from 'containers/MyOrder';
 import 'styles/Header.scss';
 import menu from 'icons/icon_menu.svg';

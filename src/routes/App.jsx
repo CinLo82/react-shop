@@ -11,8 +11,8 @@ import MyAccound from 'pages/MyAccound';
 import CreateAccount from 'pages/CreateAccound';
 import Checkout from 'pages/Checkout';
 import Orders from 'pages/Orders';
-import AppContext from '../context/AppContext';
-import useInitialState from '../hooks/useInitialState';
+import AppContext from 'context/AppContext';
+import useInitialState from 'hooks/useInitialState';
 
 function App() {
 	const initialState = useInitialState();
