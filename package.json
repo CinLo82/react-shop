@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/CinLo82/react-shop",
   "name": "react-shop",
   "version": "1.0.0",
   "description": "",
@@ -6,7 +7,9 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack serve --open --mode development --env development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -b master -d dist"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,6 @@
   "bugs": {
     "url": "https://github.com/CinLo82/react-shop/issues"
   },
-  "homepage": "https://github.com/CinLo82/react-shop#index.html",
   "devDependencies": {
     "@babel/core": "^7.21.0",
     "@babel/plugin-transform-runtime": "^7.21.0",
@@ -30,6 +32,7 @@
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
     "file-loader": "^6.2.0",
+    "gh-pages": "^5.0.0",
     "mini-css-extract-plugin": "^2.7.2",
     "sass": "^1.58.3",
     "sass-loader": "^13.2.0",

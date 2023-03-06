@@ -1,4 +1,4 @@
-import { BrowserRouter,Routes, Route } from 'react-router-dom';
+import { HashRouter,Routes, Route } from 'react-router-dom';
 import 'styles/global.css'
 import Layout from 'containers/Layout';
 import Login from 'pages/Login';
@@ -18,7 +18,7 @@ function App() {
 	const initialState = useInitialState();
         return (
 			<AppContext.Provider value={initialState}>
-				<BrowserRouter>
+				<HashRouter basename="/react-shop">
 					<Layout>
 						<Routes>
 							<Route path="/" element={<Home />} />
@@ -33,7 +33,7 @@ function App() {
 							<Route path="*" element={<NotFound />} />
 						</Routes>
 					</Layout>
-				</BrowserRouter>
+				</HashRouter>
 			</AppContext.Provider>
         )
 }
